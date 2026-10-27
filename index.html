@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="theme-color" content="#3a0d18">
+  <meta name="description" content="Un folleto digital hecho con el corazón.">
+  <title>Para Janeth</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Parisienne&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <canvas id="hearts-canvas" aria-hidden="true"></canvas>
+  <div class="ambient-glow" aria-hidden="true"></div>
+
+  <main class="book-stage" id="bookStage">
+    <div class="book-wrap">
+      <div class="book" id="book" aria-label="Folleto digital para Janeth">
+        <div class="book__edge" aria-hidden="true"></div>
+        <div class="book__spine" aria-hidden="true"></div>
+        <div class="book__turn-shadow" id="turnShadow" aria-hidden="true"></div>
+
+        <div class="pages" id="pages">
+
+          <section class="page page--cover is-active" data-page="0" aria-label="Portada">
+            <div class="cover">
+              <div class="cover__frame" aria-hidden="true"></div>
+              <div class="cover__corner cover__corner--tl" aria-hidden="true"></div>
+              <div class="cover__corner cover__corner--tr" aria-hidden="true"></div>
+              <div class="cover__corner cover__corner--bl" aria-hidden="true"></div>
+              <div class="cover__corner cover__corner--br" aria-hidden="true"></div>
+
+              <p class="cover__over">Para</p>
+              <h1 class="cover__name">Janeth</h1>
+
+              <div class="cover__divider" aria-hidden="true">
+                <span></span><i>♥</i><span></span>
+              </div>
+
+              <div class="cover__seal" aria-hidden="true">
+                <span class="cover__seal-heart">♥</span>
+                <span class="cover__seal-text">JEANS</span>
+              </div>
+
+              <p class="cover__sub">Una carta de Jhaysson</p>
+
+              <button class="open-btn" id="openBtn" type="button">
+                <span>Abrir</span>
+                <span class="open-btn__heart" aria-hidden="true">♥</span>
+              </button>
+
+              <p class="cover__hint">Hecho con el corazón</p>
+            </div>
+          </section>
+
+          <section class="page page--paper" data-page="1" aria-label="Página 1" aria-hidden="true" inert>
+            <div class="page__inner">
+              <div class="page__content">
+                <p>Hola, Janeth... Muy buenos días, tardes o noches. La verdad no sé a qué hora estás leyendo esto. No quiero incomodarte ni nada de eso, solo pasé a saludarte. Espero que te encuentres bien.</p>
+                <p>Pasé a enviarte este folleto porque la verdad siento que lo nuestro no terminó como quizás yo quise.</p>
+              </div>
+              <footer class="page__footer" aria-hidden="true"><span>♥</span><b>01</b></footer>
+            </div>
+          </section>
+
+          <section class="page page--paper" data-page="2" aria-label="Página 2" aria-hidden="true" inert>
+            <div class="page__inner">
+              <div class="page__content">
+                <p>Es más, nunca pensé que en algún momento eso tan bonito y sincero que sentíamos los dos llegaría a su fin.</p>
+                <p>Creo yo que de mi parte no pude decirte algunas cosas que me hubiese gustado decirte, y la verdad eso me atormenta. Por eso me atreví a realizar esto.</p>
+              </div>
+              <footer class="page__footer" aria-hidden="true"><span>♥</span><b>02</b></footer>
+            </div>
+          </section>
+
+          <section class="page page--paper" data-page="3" aria-label="Página 3" aria-hidden="true" inert>
+            <div class="page__inner">
+              <div class="page__content">
+                <p>Bueno, primero que todo, agradecerte la verdad por estos <strong>3 años y 9 meses</strong> de relación. Fuiste mi amor bonito.</p>
+                <p>Gracias por tu paciencia y por estar conmigo en las buenas y en las malas. Gracias por brindarme tu apoyo cuando lo necesité.</p>
+                <p>Gracias por estar ahí en mi proceso universitario. Gracias por ser la mujer que sentí que más me ha querido después de mi madre.</p>
+              </div>
+              <footer class="page__footer" aria-hidden="true"><span>♥</span><b>03</b></footer>
+            </div>
+          </section>
+
+          <section class="page page--paper" data-page="4" aria-label="Página 4" aria-hidden="true" inert>
+            <div class="page__inner">
+              <div class="page__content">
+                <p>Yo sé que fui un idiota al haber roto nuestra relación, y creo yo que merezco que quizás me puedas odiar. Pero a pesar de eso, Janeth, tú siempre fuiste la única en mi vida.</p>
+                <p>Creo yo que en todos estos años de relación que hemos estado, como yo te repetía, fuiste mi reina y mi princesa.</p>
+              </div>
+              <footer class="page__footer" aria-hidden="true"><span>♥</span><b>04</b></footer>
+            </div>
+          </section>
+
+          <section class="page page--paper" data-page="5" aria-label="Página 5" aria-hidden="true" inert>
+            <div class="page__inner">
+              <div class="page__content">
+                <p>A pesar de que no sé si hubo personas mal intencionadas diciéndote wbdas de mí, yo hoy te hablo con el corazón en la mano y con toda la sinceridad del mundo.</p>
+                <p>Te digo en estas líneas que mi amor por ti fue muy fuerte y jamás quise a otra persona en mi vida.</p>
+              </div>
+              <footer class="page__footer" aria-hidden="true"><span>♥</span><b>05</b></footer>
+            </div>
+          </section>
+
+          <section class="page page--paper" data-page="6" aria-label="Página 6" aria-hidden="true" inert>
+            <div class="page__inner">
+              <div class="page__content">
+                <p>Nunca lo quise hacer. Creo yo que estuve tan loco de amor que hasta te pedí matrimonio en una noche. Fue tanto ese amor que te he tenido que la verdad, aquel día que yo fui capaz de decir que ya no quería nada contigo, me rompí.</p>
+              </div>
+              <footer class="page__footer" aria-hidden="true"><span>♥</span><b>06</b></footer>
+            </div>
+          </section>
+
+          <section class="page page--paper" data-page="7" aria-label="Página 7" aria-hidden="true" inert>
+            <div class="page__inner">
+              <div class="page__content">
+                <p>Ese impulso mío de pensar esa maldita frase que realmente escuché, y que creo hoy en día que no fue así como yo escuché, fue el detonante para acabar con lo más bonito que había conseguido.</p>
+              </div>
+              <footer class="page__footer" aria-hidden="true"><span>♥</span><b>07</b></footer>
+            </div>
+          </section>
+
+          <section class="page page--paper" data-page="8" aria-label="Página 8" aria-hidden="true" inert>
+            <div class="page__inner">
+              <div class="page__content">
+                <p>Sé que sufriste por mi culpa, y no sabes cuánto me pesa haber hecho llorar a la mujer que juré nunca hacerle daño. Te pido mil disculpas, la verdad. Mi intención nunca fue lastimarte, mi amor.</p>
+                <p>Hoy en día ese maldito error me persigue y no me deja tranquilo.</p>
+              </div>
+              <footer class="page__footer" aria-hidden="true"><span>♥</span><b>08</b></footer>
+            </div>
+          </section>
+
+          <section class="page page--paper" data-page="9" aria-label="Página 9" aria-hidden="true" inert>
+            <div class="page__inner">
+              <div class="page__content">
+                <p>Te juro que, a pesar de tantos meses que ya pasaron, aún sigues en mi mente y en mi corazón.</p>
+                <p>Sé que quizás estás haciendo tu vida. No sé si ya conociste a alguien más o seguirás soltera; eso yo no lo sé, la verdad. Pero quería dedicarte estas palabras que me salen del corazón.</p>
+              </div>
+              <footer class="page__footer" aria-hidden="true"><span>♥</span><b>09</b></footer>
+            </div>
+          </section>
+
+          <section class="page page--paper" data-page="10" aria-label="Página 10" aria-hidden="true" inert>
+            <div class="page__inner">
+              <div class="page__content">
+                <p>Y bueno, si quizás estás conociendo a otra persona, espero que al menos te haga sentir bien y con la seguridad que necesitas, y que no te trate mal.</p>
+                <p>Aunque me duele pensarlo, sé que la probabilidad de que sea así no está tan fuera de la realidad. Y aunque me muera de celos y cólera, sabré entender que quizás no te merecía.</p>
+              </div>
+              <footer class="page__footer" aria-hidden="true"><span>♥</span><b>10</b></footer>
+            </div>
+          </section>
+
+          <section class="page page--paper" data-page="11" aria-label="Página 11" aria-hidden="true" inert>
+            <div class="page__inner">
+              <div class="page__content">
+                <p>Esto te lo quería enviar en diciembre, justo saludándote por Navidad. Pero la verdad que esto que tengo dentro de mi corazón me estaba matando.</p>
+                <p>Y leí por ahí una frase de que nadie tiene la vida comprada, y quizás uno nunca sabe si no llegue esa Navidad y no pueda decirte eso.</p>
+              </div>
+              <footer class="page__footer" aria-hidden="true"><span>♥</span><b>11</b></footer>
+            </div>
+          </section>
+
+          <section class="page page--paper" data-page="12" aria-label="Página 12" aria-hidden="true" inert>
+            <div class="page__inner">
+              <div class="page__content">
+                <p>Por eso me armé de valor para poder sacar todas las cosas en estas líneas, que espero lo tomes a bien, porque mi intención nunca fue incomodarte.</p>
+              </div>
+              <footer class="page__footer" aria-hidden="true"><span>♥</span><b>12</b></footer>
+            </div>
+          </section>
+
+          <section class="page page--paper" data-page="13" aria-label="Página 13" aria-hidden="true" inert>
+            <div class="page__inner">
+              <div class="page__content">
+                <p>No sé si sea de relevancia o no, pero todas mis cuentas se encuentran con el bonito nombre que formamos tú y yo cuando estuvimos juntos.</p>
+                <p>El nombre <strong>JEANS</strong> es un recordatorio del amor que tengo y te demostré en algún momento.</p>
+              </div>
+              <footer class="page__footer" aria-hidden="true"><span>♥</span><b>13</b></footer>
+            </div>
+          </section>
+
+          <section class="page page--paper" data-page="14" aria-label="Página 14" aria-hidden="true" inert>
+            <div class="page__inner">
+              <div class="page__content">
+                <p>Revisa mi Instagram, mi TikTok, mi perfil de Free Fire, mi WhatsApp, mi Twitter; podrás ver que no te miento.</p>
+                <div class="social-tags" aria-label="Redes sociales mencionadas">
+                  <span>Instagram</span>
+                  <span>TikTok</span>
+                  <span>Free Fire</span>
+                  <span>WhatsApp</span>
+                  <span>Twitter</span>
+                </div>
+              </div>
+              <footer class="page__footer" aria-hidden="true"><span>♥</span><b>14</b></footer>
+            </div>
+          </section>
+
+          <section class="page page--paper" data-page="15" aria-label="Página 15" aria-hidden="true" inert>
+            <div class="page__inner">
+              <div class="page__content">
+                <p>Si quieres saber algo que puede ser random pero no menos importante: tú estarás en mi agradecimiento en mi tesis, porque en varias ocasiones fuiste mi motivo y apoyo para poder lograrlo.</p>
+                <p>Gracias en serio.</p>
+              </div>
+              <footer class="page__footer" aria-hidden="true"><span>♥</span><b>15</b></footer>
+            </div>
+          </section>
+
+          <section class="page page--paper" data-page="16" aria-label="Página 16" aria-hidden="true" inert>
+            <div class="page__inner">
+              <div class="page__content">
+                <p>Muchas gracias por llegar a leer hasta aquí. Si es que me respondes, bien; y si ya solo lo lees, guárdatelo para ti.</p>
+                <p>Porque en estas líneas no está hablando Jhaysson: te está hablando su corazón, el cual ha querido expresarse.</p>
+              </div>
+              <footer class="page__footer" aria-hidden="true"><span>♥</span><b>16</b></footer>
+            </div>
+          </section>
+
+          <section class="page page--paper page--last" data-page="17" aria-label="Página 17" aria-hidden="true" inert>
+            <div class="page__inner">
+              <div class="page__content">
+                <p>Sin más que decir, este loco enamorado que sufre tu ausencia se despide, cumpliendo la meta de lo que quiso hacerte llegar.</p>
+                <p>Disculpa si te incomodé; solo necesitaba expresarme contigo.</p>
+                <p class="signature">— Jhaysson</p>
+              </div>
+              <footer class="page__footer" aria-hidden="true"><span>♥</span><b>17</b></footer>
+            </div>
+          </section>
+
+          <section class="page page--back" data-page="18" aria-label="Contraportada" aria-hidden="true" inert>
+            <div class="back-cover">
+              <div class="back-cover__frame" aria-hidden="true"></div>
+              <p class="back-cover__eyebrow">Para Janeth</p>
+              <div class="back-cover__seal" aria-hidden="true">
+                <span>♥</span>
+                <b>JEANS</b>
+              </div>
+              <h2 class="back-cover__title">Gracias por leer</h2>
+              <p class="back-cover__text">Toca el corazón</p>
+              <button class="heart-button" id="heartButton" type="button" aria-label="Enviar una lluvia de corazones">
+                <span aria-hidden="true">♥</span>
+              </button>
+              <button class="back-cover__restart" type="button" data-action="restart">Volver al inicio</button>
+            </div>
+          </section>
+
+        </div>
+      </div>
+    </div>
+
+    <nav class="controls" id="controls" aria-label="Navegación del folleto">
+      <button class="nav-btn" id="prevBtn" type="button" aria-label="Página anterior">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15.5 4.5 8 12l7.5 7.5"/></svg>
+      </button>
+
+      <div class="progress-wrap">
+        <div class="progress" id="progress" aria-hidden="true"></div>
+        <span class="page-count" id="pageCount">01 / 17</span>
+      </div>
+
+      <button class="nav-btn" id="nextBtn" type="button" aria-label="Página siguiente">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8.5 4.5 16 12l-7.5 7.5"/></svg>
+      </button>
+    </nav>
+
+    <p class="hint" id="hint">Desliza o usa las flechas <span aria-hidden="true">♥</span></p>
+  </main>
+
+  <div class="sr-only" id="status" aria-live="polite"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
